@@ -1,14 +1,12 @@
 ---
 interface Props {
   label: string;
+  href: string;
 }
 
-const { label } = Astro.props;
+const { label, href } = Astro.props;
 ---
 
-<li class="px-2">
-  <a
-    class="text-blue-500 hover:text-blue-400 duration-200 font-semibold"
-    href={`#${label}`}>{label}</a
-  >
+<li>
+  <a class="text-black dark:text-white font-semibold" href={href}>{label}</a>
 </li>
