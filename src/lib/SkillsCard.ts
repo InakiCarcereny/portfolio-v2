@@ -8,6 +8,8 @@ import Css from "@/icons/Css.astro";
 import Html from "@/icons/Html.astro";
 import Redux from "@/icons/Redux.astro";
 import Zustand from "@/icons/Zustand.astro";
+import Git from "@/icons/Git.astro";
+import GitHub from "@/icons/GitHub.astro";
 
 export const skillsCards = [
   {
@@ -59,5 +61,15 @@ export const skillsCards = [
     title: "Zustand",
     icon: Zustand,
     color: "text-orange-300",
+  },
+  {
+    title: "Git",
+    icon: Git,
+    color: "text-red-400",
+  },
+  {
+    title: "GitHub",
+    icon: GitHub,
+    color: "text-white",
   },
 ] as const;
