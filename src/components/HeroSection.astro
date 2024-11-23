@@ -1,0 +1,53 @@
+---
+import { contactButtons } from "@/lib/ContactButtons";
+---
+
+<section class="flex items-center justify-between">
+  <header class="flex flex-col gap-6">
+    <div class="flex items-center gap-4">
+      <h1
+        class="text-6xl font-semibold bg-gradient-to-r from-blue-400 via-blue-600 to-blue-700 bg-clip-text text-transparent"
+      >
+        Hi, I'm Inaki Carcereny
+      </h1>
+      <span
+        class="px-4 py-1 rounded-full bg-zinc-800 text-blue-500 font-semibold text-sm"
+      >
+        Frontend Developer
+      </span>
+    </div>
+    <p
+      class="text-base font-medium text-white text-pretty leading-5 max-w-[650px]"
+    >
+      I am 19 years old and after a year in engineering, <strong
+        class="font-semibold text-blue-500"
+        >I discovered my true passion in self-taught web development,
+        specializing in Front-End.</strong
+      > I focus on creating responsive and attractive interfaces, with unique designs
+      focused on the user experience. <strong
+        class="font-semibold text-blue-500"
+        >My goal is to provide clean, scalable and reusable code, always
+        applying best practices.</strong
+      > I am constantly learning to continue improving and provide innovative solutions
+      in the world of web development.
+    </p>
+    <div class="flex items-center gap-4">
+      {
+        contactButtons.map(({ icon: Icon, label, href }) => (
+          <a
+            href={href}
+            class="flex items-center gap-2 bg-zinc-800 text-blue-500 rounded-full px-4 py-1 font-semibold"
+          >
+            <Icon class:list={["h-5 w-5"]} />
+            <p>{label}</p>
+          </a>
+        ))
+      }
+    </div>
+  </header>
+  <img
+    src="/assets/inaki.webp"
+    alt=""
+    class="w-56 h-56 rounded-full border border-blue-500"
+  />
+</section>

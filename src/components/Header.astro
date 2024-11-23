@@ -1,0 +1,19 @@
+---
+import Duck from "@/icons/Duck.astro";
+import Item from "@/components/Item.astro";
+import { navItems } from "@/lib/NavItems";
+---
+
+<header
+  class="mx-auto max-w-[900px] w-full h-[70px] py-8 flex items-center justify-between"
+>
+  <h2 class="flex items-center gap-2 font-mono">
+    <Duck class:list={["h-10 w-10 text-blue-500"]} />
+    <span class="text-white font-semibold text-3xl">Here, InakiDev</span>
+  </h2>
+  <nav>
+    <ul class="flex items-center gap-4 bg-zinc-800 rounded-full px-4 py-2">
+      {navItems.map((item) => <Item label={item.label} />)}
+    </ul>
+  </nav>
+</header>
