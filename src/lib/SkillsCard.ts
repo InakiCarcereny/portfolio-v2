@@ -10,66 +10,50 @@ import Redux from "@/icons/Redux.astro";
 import Zustand from "@/icons/Zustand.astro";
 import Git from "@/icons/Git.astro";
 import GitHub from "@/icons/GitHub.astro";
+import Vite from "@/icons/Vite.astro";
+import ReactRouter from "@/icons/ReactRouter.astro";
 
 export const skillsCards = [
   {
-    title: "React",
-    icon: React,
-    color: "text-cyan-500",
-  },
-  {
-    title: "Next.js",
-    icon: Next,
-    color: "text-white",
-  },
-  {
-    title: "Astro",
-    icon: Astro,
-    color: "text-orange-500",
-  },
-  {
-    title: "Tailwind",
-    icon: Tailwind,
-    color: "text-cyan-500",
-  },
-  {
-    title: "TypeScript",
-    icon: Ts,
-    color: "text-blue-500",
-  },
-  {
-    title: "JavaScript",
-    icon: Js,
-    color: "text-yellow-500",
-  },
-  {
-    title: "CSS",
-    icon: Css,
-    color: "text-purple-500",
-  },
-  {
-    title: "HTML",
     icon: Html,
-    color: "text-orange-500",
   },
   {
-    title: "Redux",
+    icon: Css,
+  },
+  {
+    icon: Js,
+  },
+  {
+    icon: Tailwind,
+  },
+  {
+    icon: React,
+  },
+  {
+    icon: Ts,
+  },
+  {
+    icon: Next,
+  },
+  {
+    icon: Astro,
+  },
+  {
     icon: Redux,
-    color: "text-violet-500",
   },
   {
-    title: "Zustand",
     icon: Zustand,
-    color: "text-orange-300",
   },
   {
-    title: "Git",
+    icon: Vite,
+  },
+  {
+    icon: ReactRouter,
+  },
+  {
     icon: Git,
-    color: "text-red-400",
   },
   {
-    title: "GitHub",
     icon: GitHub,
-    color: "text-white",
   },
 ] as const;
