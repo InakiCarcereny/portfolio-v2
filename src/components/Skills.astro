@@ -2,18 +2,21 @@
 import { skillsCards } from "@/lib/SkillsCard";
 ---
 
-<div class="flex flex-col">
-  <h3 class="text-black font-semibold text-5xl font-mono underline">Skills</h3>
-  <article class="flex items-center justify-between">
-    <ul class="grid grid-cols-5 gap-4">
-      {
-        skillsCards.map(({ icon: Icon }) => (
-          <li class="flex items-center justify-center bg-zinc-900 rounded-[8px] px-4 py-4">
-            <Icon class:list={["h-12 w-12"]} />
-          </li>
-        ))
-      }
-    </ul>
-    <img src="/assets/skills-banner.webp" alt="skills banner" />
-  </article>
-</div>
+<section
+  class="mx-auto max-w-[950px] flex items-center justify-center w-full h-full relative"
+>
+  <ul class="grid grid-cols-5 gap-4">
+    {
+      skillsCards.map(({ icon: Icon }) => (
+        <li class="flex items-center justify-center bg-zinc-900 rounded-[8px] px-4 py-4">
+          <Icon class:list={["h-14 w-14"]} />
+        </li>
+      ))
+    }
+  </ul>
+  <img
+    src="/assets/skills-banner.webp"
+    alt="skills banner"
+    class="max-w-[300px] h-auto absolute bottom-6 right-0"
+  />
+</section>
