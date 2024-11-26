@@ -1,49 +1,61 @@
 ---
 import GitHub from "@/icons/GitHub.astro";
+import Rocket from "@/icons/Rocket.astro";
 import { MyProjects } from "@/lib/Projects";
 ---
 
-<section class="mx-auto max-w-[1650px] w-full h-full mt-6">
-  <ul class="grid grid-cols-2 gap-8">
-    {
-      MyProjects.map((project) => (
-        <li class="flex gap-6 min-h-[200px] max-w-[800px] w-full">
-          <img
-            src={project.image}
-            alt={project.name}
-            class="w-auto h-[300px] rounded-[4px] hover:scale-95 duration-150"
-          />
-          <div class="flex flex-col justify-between">
-            <div class="flex flex-col gap-4">
-              <span class="text-black dark:text-white font-semibold text-3xl">
-                {project.name}
-              </span>
-              <ul class="flex items-center gap-2 flex-wrap">
-                {project.tags.map((tag) => (
-                  <li
-                    class={`${tag.bg} flex items-center gap-2 rounded-full px-2 py-1`}
-                  >
-                    <tag.icon class:list={["h-4 w-4"]} />
-                    <span class="text-sm font-semibold text-white">
-                      {tag.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-              <p class="text-gray-700 dark:text-white text-sm font-semibold">
-                {project.description}
-              </p>
+<section class="mx-auto bg-zinc-100 dark:bg-[#222222] w-full h-full mt-28">
+  <div class="mx-auto max-w-[1650px] w-full h-full py-10">
+    <header class="flex items-center gap-4 mb-8">
+      <Rocket class:list={["h-10 w-10 text-black dark:text-white"]} />
+      <h3
+        id="Projects"
+        class="text-5xl font-semibold text-black dark:text-white"
+      >
+        Projects
+      </h3>
+    </header>
+    <ul class="grid grid-cols-2 gap-8">
+      {
+        MyProjects.map((project) => (
+          <li class="flex gap-6 min-h-[200px] max-w-[800px] w-full">
+            <img
+              src={project.image}
+              alt={project.name}
+              class="w-auto h-[300px] rounded-[4px] hover:scale-95 duration-150"
+            />
+            <div class="flex flex-col justify-between">
+              <div class="flex flex-col gap-4">
+                <span class="text-black dark:text-white font-semibold text-3xl">
+                  {project.name}
+                </span>
+                <ul class="flex items-center gap-2 flex-wrap">
+                  {project.tags.map((tag) => (
+                    <li
+                      class={`${tag.bg} flex items-center gap-2 rounded-full px-2 py-1`}
+                    >
+                      <tag.icon class:list={["h-4 w-4"]} />
+                      <span class="text-sm font-semibold text-white">
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p class="text-gray-700 dark:text-white text-sm font-semibold">
+                  {project.description}
+                </p>
+              </div>
+              <a
+                href={project.code}
+                class="flex items-center justify-center gap-2 rounded-[4px] px-2 py-1 bg-zinc-300 max-w-[80px]"
+              >
+                <GitHub class:list={["h-6 w-6"]} />
+                <span class="text-sm font-semibold">Code</span>
+              </a>
             </div>
-            <a
-              href={project.code}
-              class="flex items-center justify-center gap-2 rounded-[4px] px-2 py-1 bg-zinc-300 max-w-[80px]"
-            >
-              <GitHub class:list={["h-6 w-6"]} />
-              <span class="text-sm font-semibold">Code</span>
-            </a>
-          </div>
-        </li>
-      ))
-    }
-  </ul>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>

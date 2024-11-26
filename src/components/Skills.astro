@@ -1,22 +1,26 @@
 ---
+import Universe from "@/icons/Universe.astro";
 import { skillsCards } from "@/lib/SkillsCard";
 ---
 
 <section
-  class="mx-auto max-w-[950px] flex items-center justify-center w-full h-full relative"
+  class="mx-auto max-w-[1650px] w-full h-full mt-28 flex flex-col items-center justify-center"
 >
-  <ul class="grid grid-cols-5 gap-4">
-    {
-      skillsCards.map(({ icon: Icon }) => (
-        <li class="flex items-center justify-center bg-zinc-900 rounded-[8px] px-4 py-4">
-          <Icon class:list={["h-14 w-14"]} />
-        </li>
-      ))
-    }
-  </ul>
-  <img
-    src="/assets/skills-banner.webp"
-    alt="skills banner"
-    class="max-w-[300px] h-auto absolute bottom-6 right-0"
-  />
+  <header class="mb-8 flex items-center gap-4">
+    <Universe class:list={["h-10 w-10 text-black dark:text-white"]} />
+    <h3 id="Skills" class="text-5xl font-semibold text-black dark:text-white">
+      Skills
+    </h3>
+  </header>
+  <div class="flex items-start justify-between">
+    <ul class="grid grid-cols-5 gap-4">
+      {
+        skillsCards.map(({ icon: Icon }) => (
+          <li class="flex items-center justify-center bg-zinc-300 rounded-[8px] px-4 py-4">
+            <Icon class:list={["h-14 w-14"]} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </section>
