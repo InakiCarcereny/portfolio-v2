@@ -1,11 +1,11 @@
 ---
 import Duck from "@/icons/Duck.astro";
 import Separator from "@/icons/Separator.astro";
-import Moon from "@/icons/Moon.astro";
 
 import Item from "@/components/Item.astro";
 
 import { navItems } from "@/lib/NavItems";
+import { ToggleTheme } from "@/components/ToggleTheme";
 ---
 
 <header
@@ -29,8 +29,6 @@ import { navItems } from "@/lib/NavItems";
       Download CV
     </button>
     <Separator class:list={["h-6 w-6 dark:text-white text-black"]} />
-    <button>
-      <Moon class:list={["h-6 w-6"]} />
-    </button>
+    <ToggleTheme client:load />
   </div>
 </header>
