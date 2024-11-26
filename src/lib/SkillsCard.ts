@@ -15,45 +15,59 @@ import ReactRouter from "@/icons/ReactRouter.astro";
 
 export const skillsCards = [
   {
+    title: "HTML",
     icon: Html,
   },
   {
+    title: "CSS",
     icon: Css,
   },
   {
+    title: "JavaScript",
     icon: Js,
   },
   {
+    title: "Tailwind",
     icon: Tailwind,
   },
   {
+    title: "React",
     icon: React,
   },
   {
+    title: "TypeScript",
     icon: Ts,
   },
   {
+    title: "Next.js",
     icon: Next,
   },
   {
+    title: "Astro",
     icon: Astro,
   },
   {
+    title: "Redux",
     icon: Redux,
   },
   {
+    title: "Zustand",
     icon: Zustand,
   },
   {
+    title: "Vite",
     icon: Vite,
   },
   {
+    title: "React Router",
     icon: ReactRouter,
   },
   {
+    title: "Git",
     icon: Git,
   },
   {
+    title: "GitHub",
     icon: GitHub,
   },
 ] as const;
