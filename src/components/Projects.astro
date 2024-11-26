@@ -1,25 +1,49 @@
-<div class="flex flex-col gap-4">
-  <h3 class="text-end text-black font-semibold text-5xl font-mono underline">
-    Projects
-  </h3>
-  <article class="flex items-center justify-between">
-    <img
-      src="/assets/projects-banner.webp"
-      alt="projects banner"
-      class="w-auto h-[350px]"
-    />
-    <li
-      class="border border-black rounded-[4px] p-2 flex flex-col gap-4 max-w-[700px]"
-    >
-      <img
-        src="/assets/discord-clone.png"
-        alt="discord clone"
-        class="w-full h-[300px] rounded-[6px]"
-      />
-      <p class="text-sm text-gray-700 font-semibold">
-        Discord clone made with React, Next.js, Tailwind, and Redux. It was a
-        fun project to work on and I learned a lot from it.
-      </p>
-    </li>
-  </article>
-</div>
+---
+import GitHub from "@/icons/GitHub.astro";
+import { MyProjects } from "@/lib/Projects";
+---
+
+<section class="mx-auto max-w-[1650px] w-full h-full py-6">
+  <ul class="grid grid-cols-2 gap-8">
+    {
+      MyProjects.map((project) => (
+        <li class="flex gap-6 min-h-[200px] max-w-[800px] w-full">
+          <img
+            src={project.image}
+            alt={project.name}
+            class="w-auto h-[300px] rounded-[4px] hover:scale-95 duration-150"
+          />
+          <div class="flex flex-col justify-between">
+            <div class="flex flex-col gap-4">
+              <span class="text-black dark:text-white font-semibold text-3xl">
+                {project.name}
+              </span>
+              <ul class="flex items-center gap-2 flex-wrap">
+                {project.tags.map((tag) => (
+                  <li
+                    class={`${tag.bg} flex items-center gap-2 rounded-full px-2 py-1`}
+                  >
+                    <tag.icon class:list={["h-4 w-4"]} />
+                    <span class="text-sm font-semibold text-white">
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              <span class="text-gray-700 dark:text-white text-sm font-semibold">
+                {project.description}
+              </span>
+            </div>
+            <a
+              href={project.code}
+              class="flex items-center justify-center gap-2 rounded-full px-2 py-1 bg-zinc-300 max-w-[80px]"
+            >
+              <GitHub class:list={["h-6 w-6"]} />
+              <span class="text-sm font-semibold">Code</span>
+            </a>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</section>
