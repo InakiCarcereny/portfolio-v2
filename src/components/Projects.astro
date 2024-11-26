@@ -3,7 +3,7 @@ import GitHub from "@/icons/GitHub.astro";
 import { MyProjects } from "@/lib/Projects";
 ---
 
-<section class="mx-auto max-w-[1650px] w-full h-full py-6">
+<section class="mx-auto max-w-[1650px] w-full h-full mt-6">
   <ul class="grid grid-cols-2 gap-8">
     {
       MyProjects.map((project) => (
@@ -30,13 +30,13 @@ import { MyProjects } from "@/lib/Projects";
                   </li>
                 ))}
               </ul>
-              <span class="text-gray-700 dark:text-white text-sm font-semibold">
+              <p class="text-gray-700 dark:text-white text-sm font-semibold">
                 {project.description}
-              </span>
+              </p>
             </div>
             <a
               href={project.code}
-              class="flex items-center justify-center gap-2 rounded-full px-2 py-1 bg-zinc-300 max-w-[80px]"
+              class="flex items-center justify-center gap-2 rounded-[4px] px-2 py-1 bg-zinc-300 max-w-[80px]"
             >
               <GitHub class:list={["h-6 w-6"]} />
               <span class="text-sm font-semibold">Code</span>

@@ -23,11 +23,13 @@ import { ToggleTheme } from "@/components/ToggleTheme";
     </ul>
   </nav>
   <div class="flex items-center gap-4">
-    <button
+    <a
+      href="/assets/cv.pdf"
+      download="inaki-CV"
       class="px-4 py-1 border border-black dark:border-white rounded-[4px] text-black dark:text-white font-semibold dark:hover:bg-white hover:bg-black dark:hover:text-black hover:text-white duration-200"
     >
       Download CV
-    </button>
+    </a>
     <Separator class:list={["h-6 w-6 dark:text-white text-black"]} />
     <ToggleTheme client:load />
   </div>
