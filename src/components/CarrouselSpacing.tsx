@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { skillsCards } from "@/lib/SkillsCard";
 
 import {
@@ -18,7 +16,7 @@ export function CarouselSpacing() {
           <CarouselItem key={title} className="basis-1/5">
             <div className="flex items-center justify-center gap-2 bg-zinc-100 rounded-[4px] p-4 h-[200px]">
               {/* <Icon /> */}
-              <p className="text-sm font-semibold">{title}</p>
+              <p className="text-sm font-semibold text-black">{title}</p>
             </div>
           </CarouselItem>
         ))}

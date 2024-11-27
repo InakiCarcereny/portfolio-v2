@@ -1,3 +1,21 @@
-<section class="mx-auto bg-zinc-100 dark:bg-[#222222] w-full h-full mt-28">
-  contact
+---
+import Alien from "@/icons/Alien.astro";
+---
+
+<section
+  class="mx-auto bg-zinc-100 dark:bg-[#222222] w-full h-full mt-28 py-10"
+>
+  <div class="flex flex-col mx-auto max-w-[1650px] w-full h-full py-10">
+    <header class="flex items-center place-content-end gap-4 mb-8">
+      <Alien class:list={["h-10 w-10 text-black dark:text-white"]} />
+      <h3 class="text-5xl font-semibold text-black dark:text-white">
+        Contact me at
+      </h3>
+    </header>
+    <img
+      src="/assets/inaki.webp"
+      alt="pohoto of inaki"
+      class="w-48 h-48 rounded-[4px] border-2 -rotate-12 border-blue-500"
+    />
+  </div>
 </section>

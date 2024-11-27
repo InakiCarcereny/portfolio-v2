@@ -89,7 +89,7 @@ export const MyProjects = [
   {
     name: "Music player",
     description:
-      "A full music aplication, you can create playlists, add songs to your favorites, meet the song of the day, search albums, see your recent songs, and obviusly play all of the songs",
+      "A full music aplication, you can create playlists, add songs to your favorites, meet the song of the day, search albums, see your recent songs, and obviusly play all of the songs.",
     image: "/assets/discord-clone2.png",
     code: "https://github.com/InakiCarcereny/musicPlayer-app",
     tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.TAILWIND, TAGS.REDUX, TAGS.JS],
