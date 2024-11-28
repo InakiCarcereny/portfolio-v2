@@ -26,7 +26,7 @@ import { MyProjects } from "@/lib/Projects";
               alt={project.name}
               class="w-auto h-[300px] rounded-[4px] hover:scale-95 duration-150"
             />
-            <div class="flex flex-col gap-4 md:gap-0 justify-between">
+            <div class="flex flex-col justify-between h-full">
               <div class="flex flex-col gap-4">
                 <span class="text-black dark:text-white font-semibold text-xl md:text-3xl">
                   {project.name}
@@ -48,7 +48,9 @@ import { MyProjects } from "@/lib/Projects";
                 </p>
               </div>
               <a
+                rel="noopener noreferrer"
                 href={project.code}
+                aria-label="Go to project code"
                 class="flex items-center justify-center gap-2 rounded-[4px] px-2 py-1 bg-white dark:bg-black max-w-[80px]"
               >
                 <GitHub class:list={["h-6 w-6"]} />

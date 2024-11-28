@@ -21,11 +21,13 @@ import "@/styles/header.css";
         >InakiDev</span
       >
     </h2>
+
     <nav class="hidden md:flex">
       <ul class="flex items-center gap-6">
         {navItems.map((item) => <Item label={item.label} />)}
       </ul>
     </nav>
+
     <div class="items-center gap-4 hidden md:flex">
       <a
         href="/assets/cv.pdf"
@@ -46,7 +48,7 @@ import "@/styles/header.css";
     const header = document.querySelector("header");
     const isDarkMode = document.body.classList.contains("dark");
 
-    if (window.scrollY > 0) {
+    if (window.scrollY > 0 && header) {
       header.classList.add(
         isDarkMode ? "header-scroll-dark" : "header-scroll-light"
       );
@@ -58,7 +60,6 @@ import "@/styles/header.css";
     }
   }
 
-  // Escuchar el evento de scroll
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", handleScroll);
   }

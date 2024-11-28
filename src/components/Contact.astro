@@ -19,7 +19,7 @@ import { contacts } from "@/lib/Contacts";
         <h3
           class="md:text-5xl text-2xl font-semibold text-black dark:text-white"
         >
-          Contact me at
+          Contact me
         </h3>
         <p
           class="md:text-sm text-xs font-medium text-gray-700 leading-relaxed text-wrap dark:text-white md:max-w-[450px] max-w-[300px] w-full"
@@ -40,13 +40,20 @@ import { contacts } from "@/lib/Contacts";
       <ul class="flex flex-col gap-4 max-w-[400px] w-full">
         {
           contacts.map((contact) => (
-            <li class="flex items-center justify-center gap-4 font-semibold text-black dark:text-white bg-zinc-100 rounded-[4px] px-4 py-1 dark:bg-black w-full">
-              <contact.icon
-                class:list={["h-5 w-5 text-black dark:text-white"]}
-              />
-              <p class="font-semibold text-sm md:text-base text-black dark:text-white">
-                {contact.label}
-              </p>
+            <li class="w-full">
+              <a
+                href={contact.href}
+                rel="noopener noreferrer"
+                aria-label={`Go to ${contact.label} page`}
+                class="flex items-center justify-center gap-4 font-semibold text-black dark:text-white bg-zinc-100 rounded-[4px] px-4 py-1 dark:bg-black w-full"
+              >
+                <contact.icon
+                  class:list={["h-5 w-5 text-black dark:text-white"]}
+                />
+                <p class="font-semibold text-sm md:text-base text-black dark:text-white">
+                  {contact.label}
+                </p>
+              </a>
             </li>
           ))
         }
