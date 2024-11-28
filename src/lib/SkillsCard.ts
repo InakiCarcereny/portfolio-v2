@@ -1,73 +1,73 @@
-import React from "@/icons/React.astro";
-import Next from "@/icons/Next.astro";
-import Astro from "@/icons/AstroIcon.astro";
-import Tailwind from "@/icons/Tailwind.astro";
-import Ts from "@/icons/Ts.astro";
-import Js from "@/icons/Js.astro";
-import Css from "@/icons/Css.astro";
-import Html from "@/icons/Html.astro";
-import Redux from "@/icons/Redux.astro";
-import Zustand from "@/icons/Zustand.astro";
-import Git from "@/icons/Git.astro";
-import GitHub from "@/icons/GitHub.astro";
-import Vite from "@/icons/Vite.astro";
-import ReactRouter from "@/icons/ReactRouter.astro";
+import { React } from "@/icons/React";
+import { Next } from "@/icons/Next";
+import { Astro } from "@/icons/Astro";
+import { Tailwind } from "@/icons/Tailwind";
+import { Ts } from "@/icons/Ts";
+import { Js } from "@/icons/Js";
+import { Css } from "@/icons/Css";
+import { Html } from "@/icons/Html";
+import { Redux } from "@/icons/Redux";
+import { Bear } from "@/icons/Bear";
+import { Git } from "@/icons/Git";
+import { Github } from "@/icons/Github";
+import { Vite } from "@/icons/Vite";
+import { Reactrouter } from "@/icons/Reactrouter";
 
 export const skillsCards = [
   {
     title: "HTML",
-    icon: Html,
+    icon: Html({ className: "h-10 w-10" }),
   },
   {
     title: "CSS",
-    icon: Css,
+    icon: Css({ className: "h-10 w-10 text-purple-900" }),
   },
   {
     title: "JavaScript",
-    icon: Js,
+    icon: Js({ className: "h-10 w-10" }),
   },
   {
     title: "Tailwind",
-    icon: Tailwind,
+    icon: Tailwind({ className: "h-10 w-10" }),
   },
   {
     title: "React",
-    icon: React,
+    icon: React({ className: "h-10 w-10" }),
   },
   {
     title: "TypeScript",
-    icon: Ts,
+    icon: Ts({ className: "h-10 w-10" }),
   },
   {
     title: "Next.js",
-    icon: Next,
+    icon: Next({ className: "h-10 w-10" }),
   },
   {
     title: "Astro",
-    icon: Astro,
+    icon: Astro({ className: "h-10 w-10" }),
   },
   {
     title: "Redux",
-    icon: Redux,
+    icon: Redux({ className: "h-10 w-10" }),
   },
   {
     title: "Zustand",
-    icon: Zustand,
+    icon: Bear({ className: "h-10 w-10" }),
   },
   {
     title: "Vite",
-    icon: Vite,
+    icon: Vite({ className: "h-10 w-10" }),
   },
   {
     title: "React Router",
-    icon: ReactRouter,
+    icon: Reactrouter({ className: "h-10 w-10" }),
   },
   {
     title: "Git",
-    icon: Git,
+    icon: Git({ className: "h-10 w-10" }),
   },
   {
     title: "GitHub",
-    icon: GitHub,
+    icon: Github({ className: "h-10 w-10" }),
   },
 ] as const;
