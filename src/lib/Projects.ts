@@ -67,7 +67,7 @@ export const MyProjects = [
     name: "Discord clone",
     description:
       "Discord Clone TS is a web application that replicates the core features of Discord, such as server creation, channels, and real-time messaging, built with TypeScript and modern technologies.",
-    image: "/assets/discord-clone2.png",
+    image: "/assets/discord-clone.webp",
     code: "https://github.com/InakiCarcereny/discord-clone-ts",
     tags: [
       TAGS.REACT,
@@ -82,7 +82,7 @@ export const MyProjects = [
     name: "Shop cart",
     description:
       "Shop Store Zustand is a demo application showcasing a modern approach to building responsive and efficient e-commerce frontends.",
-    image: "/assets/discord-clone2.png",
+    image: "/assets/dashboard.webp",
     code: "https://github.com/InakiCarcereny/shop-store-zustand",
     tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.TAILWIND, TAGS.ZUSTAND, TAGS.TS],
   },
@@ -90,7 +90,7 @@ export const MyProjects = [
     name: "Music player",
     description:
       "A full music aplication, you can create playlists, add songs to your favorites, meet the song of the day, search albums, see your recent songs, and obviusly play all of the songs.",
-    image: "/assets/discord-clone2.png",
+    image: "/assets/music-player.webp",
     code: "https://github.com/InakiCarcereny/musicPlayer-app",
     tags: [TAGS.REACT, TAGS.NEXTJS, TAGS.TAILWIND, TAGS.REDUX, TAGS.JS],
   },
@@ -98,7 +98,7 @@ export const MyProjects = [
     name: "Dashboard",
     description:
       "Dashboard-TS is a project built with TypeScript that provides a modern and scalable solution for data management and interfaces. This repository features the implementation of an interactive dashboard, designed to be intuitive and highly customizable for business applications.",
-    image: "/assets/discord-clone2.png",
+    image: "/assets/dashboard.webp",
     code: "https://github.com/InakiCarcereny/dashboard-ts",
     tags: [
       TAGS.REACT,
