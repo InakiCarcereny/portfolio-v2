@@ -3,17 +3,17 @@ import { contactButtons } from "@/lib/ContactButtons";
 ---
 
 <section
+  id="About"
   class="flex flex-col gap-16 items-center justify-center max-w-[950px] mx-auto px-5"
 >
   <header class="flex flex-col gap-4 items-center">
     <h1
-      id="About"
-      class="text-6xl font-extrabold bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent text-center leading-tight drop-shadow-md text-pretty"
+      class="md:text-6xl text-4xl font-extrabold bg-gradient-to-b from-blue-400 via-blue-600 to-blue-800 bg-clip-text text-transparent text-center leading-tight drop-shadow-md text-pretty z-10"
     >
       Hi! My name is Inaki Carcereny and I am a Frontend Developer.
     </h1>
     <p
-      class="text-base text-center font-medium text-gray-700 leading-relaxed max-w-3xl mx-auto dark:text-white"
+      class="md:text-base text-sm text-center font-medium text-gray-700 leading-relaxed max-w-3xl mx-auto dark:text-white"
     >
       I am 19 years old and after a year in engineering,
       <strong
@@ -44,14 +44,14 @@ import { contactButtons } from "@/lib/ContactButtons";
             class="flex items-center gap-2 font-semibold text-black dark:text-white"
           >
             <Icon class:list={["h-5 w-5 text-black dark:text-white"]} />
-            <p>{label}</p>
+            <p class="md:text-base text-sm">{label}</p>
           </a>
         ))
       }
     </ul>
     <a
       href="#Projects"
-      class="flex justify-center items-center text-white bg-black dark:bg-white dark:text-black rounded-[4px] px-4 py-1 font-semibold text-base"
+      class="flex justify-center items-center text-white bg-black dark:bg-white dark:text-black rounded-[4px] px-4 py-1 font-semibold md:text-base text-sm"
     >
       Read More
     </a>

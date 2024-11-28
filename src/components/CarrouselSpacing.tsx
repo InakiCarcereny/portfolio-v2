@@ -12,17 +12,22 @@ export function CarouselSpacing() {
   return (
     <Carousel className="w-full max-w-full">
       <CarouselContent className="-ml-4">
-        {skillsCards.map(({ title, icon: Icon }) => (
-          <CarouselItem key={title} className="basis-1/5">
-            <div className="flex items-center justify-center gap-2 bg-zinc-100 rounded-[4px] p-4 h-[200px]">
-              {/* <Icon /> */}
-              <p className="text-sm font-semibold text-black">{title}</p>
+        {skillsCards.map(({ title, icon }) => (
+          <CarouselItem
+            key={title}
+            className="md:basis-1/5 basis-1/3 shadow-sm"
+          >
+            <div className="flex flex-col gap-2 items-center justify-center bg-zinc-100 dark:bg-[#222222] rounded-[4px] p-4 h-[200px]">
+              <span>{icon}</span>
+              <p className="md:text-xl text-sm font-semibold text-black dark:text-white">
+                {title}
+              </p>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden md:flex" />
+      <CarouselNext className="hidden md:flex" />
     </Carousel>
   );
 }

@@ -3,34 +3,63 @@ import Duck from "@/icons/Duck.astro";
 import Separator from "@/icons/Separator.astro";
 
 import Item from "@/components/Item.astro";
+import { HamburgerButton } from "@/components/HamburguerButton";
+import { ToggleTheme } from "@/components/ToggleTheme";
 
 import { navItems } from "@/lib/NavItems";
-import { ToggleTheme } from "@/components/ToggleTheme";
+
+import "@/styles/header.css";
 ---
 
-<header
-  class="mx-auto max-w-[1150px] w-full h-[70px] py-12 flex items-center justify-between"
->
-  <h2 class="flex items-center gap-2 font-mono">
-    <Duck class:list={["h-10 w-10 text-cyan-600"]} />
-    <span class="text-black dark:text-white font-semibold text-3xl"
-      >InakiDev</span
-    >
-  </h2>
-  <nav>
-    <ul class="flex items-center gap-6">
-      {navItems.map((item) => <Item label={item.label} />)}
-    </ul>
-  </nav>
-  <div class="flex items-center gap-4">
-    <a
-      href="/assets/cv.pdf"
-      download="inaki-CV"
-      class="px-4 py-1 border border-black dark:border-white rounded-[4px] text-black dark:text-white font-semibold dark:hover:bg-white hover:bg-black dark:hover:text-black hover:text-white duration-200"
-    >
-      Download CV
-    </a>
-    <Separator class:list={["h-6 w-6 dark:text-white text-black"]} />
-    <ToggleTheme client:load />
+<header class="w-full h-[70px] py-12 sticky top-0">
+  <div
+    class="mx-auto max-w-[1150px] w-full h-full flex items-center justify-between px-4 md:px-0"
+  >
+    <h2 class="flex items-center gap-2 font-mono">
+      <Duck class:list={["md:h-10 md:w-10 h-8 w-8 text-cyan-600"]} />
+      <span class="text-black dark:text-white font-semibold text-lg md:text-3xl"
+        >InakiDev</span
+      >
+    </h2>
+    <nav class="hidden md:flex">
+      <ul class="flex items-center gap-6">
+        {navItems.map((item) => <Item label={item.label} />)}
+      </ul>
+    </nav>
+    <div class="items-center gap-4 hidden md:flex">
+      <a
+        href="/assets/cv.pdf"
+        download="inaki-CV"
+        class="px-4 py-1 border border-black dark:border-white rounded-[4px] text-black dark:text-white font-semibold dark:hover:bg-white hover:bg-black dark:hover:text-black hover:text-white duration-200"
+      >
+        Download CV
+      </a>
+      <Separator class:list={["h-6 w-6 dark:text-white text-black"]} />
+      <ToggleTheme client:load />
+    </div>
+    <HamburgerButton client:load />
   </div>
 </header>
+
+<script>
+  function handleScroll() {
+    const header = document.querySelector("header");
+    const isDarkMode = document.body.classList.contains("dark");
+
+    if (window.scrollY > 0) {
+      header.classList.add(
+        isDarkMode ? "header-scroll-dark" : "header-scroll-light"
+      );
+      header.classList.remove(
+        isDarkMode ? "header-scroll-light" : "header-scroll-dark"
+      );
+    } else {
+      header.classList.remove("header-scroll-dark", "header-scroll-light");
+    }
+  }
+
+  // Escuchar el evento de scroll
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", handleScroll);
+  }
+</script>
