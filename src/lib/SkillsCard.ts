@@ -12,6 +12,7 @@ import { Git } from "@/icons/Git";
 import { Github } from "@/icons/Github";
 import { Vite } from "@/icons/Vite";
 import { Reactrouter } from "@/icons/Reactrouter";
+import { Jest } from "@/icons/Jest";
 
 export const skillsCards = [
   {
@@ -69,5 +70,9 @@ export const skillsCards = [
   {
     title: "GitHub",
     icon: Github({ className: "h-10 w-10" }),
+  },
+  {
+    title: "Jest",
+    icon: Jest({ className: "h-10 w-10" }),
   },
 ] as const;
