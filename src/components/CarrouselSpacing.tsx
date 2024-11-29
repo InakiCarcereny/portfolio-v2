@@ -15,7 +15,7 @@ export function CarouselSpacing() {
         {skillsCards.map(({ title, icon }) => (
           <CarouselItem
             key={title}
-            className="md:basis-1/5 basis-1/3 shadow-sm"
+            className="xl:basis-1/5 basis-1/3 shadow-sm"
           >
             <div className="flex flex-col gap-2 items-center justify-center bg-zinc-100 dark:bg-[#222222] rounded-[4px] p-4 h-[200px]">
               <span>{icon}</span>
@@ -26,8 +26,8 @@ export function CarouselSpacing() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="hidden md:flex" />
-      <CarouselNext className="hidden md:flex" />
+      <CarouselPrevious className="hidden lg:flex" />
+      <CarouselNext className="hidden lg:flex" />
     </Carousel>
   );
 }
