@@ -55,7 +55,7 @@ import "@/styles/header.css";
       header.classList.remove(
         isDarkMode ? "header-scroll-light" : "header-scroll-dark"
       );
-    } else {
+    } else if (header) {
       header.classList.remove("header-scroll-dark", "header-scroll-light");
     }
   }
