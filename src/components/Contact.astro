@@ -1,7 +1,7 @@
 ---
-import Alien from "@/icons/Alien.astro";
+import Alien from '@/icons/Alien.astro';
 
-import { contacts } from "@/lib/Contacts";
+import { contacts } from '@/lib/Contacts';
 ---
 
 <section
@@ -11,9 +11,9 @@ import { contacts } from "@/lib/Contacts";
   <div
     class="flex flex-col mx-auto max-w-[1650px] w-full h-full py-10 px-4 xl:px-0"
   >
-    <header class="flex items-center place-content-end gap-4 mb-8">
+    <header class="flex items-center gap-4 mb-8">
       <Alien
-        class:list={["md:h-10 md:w-10 w-8 h-8 text-black dark:text-white"]}
+        class:list={['md:h-10 md:w-10 w-8 h-8 text-black dark:text-white']}
       />
       <div class="flex flex-col gap-4">
         <h3
@@ -35,7 +35,7 @@ import { contacts } from "@/lib/Contacts";
       <img
         src="/assets/inaki.webp"
         alt="pohoto of inaki"
-        class="w-48 h-48 rounded-[4px] border dark:border-black border-zinc-300"
+        class="w-48 h-48 object-cover rounded-[4px] border dark:border-black border-zinc-300"
       />
       <ul class="flex flex-col gap-4 max-w-[400px] w-full">
         {
@@ -48,7 +48,7 @@ import { contacts } from "@/lib/Contacts";
                 class="flex items-center justify-center gap-4 font-semibold text-black dark:text-white bg-zinc-100 rounded-[4px] px-4 py-1 dark:bg-black w-full"
               >
                 <contact.icon
-                  class:list={["h-5 w-5 text-black dark:text-white"]}
+                  class:list={['h-5 w-5 text-black dark:text-white']}
                 />
                 <p class="font-semibold text-sm md:text-base text-black dark:text-white">
                   {contact.label}
